@@ -1,0 +1,59 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+@import helper._
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Welcome to Play") {
+<!DOCTYPE html>
+    <html lang="ja">
+        <head>
+            <meta charset="UTF-8">
+            <title>おみくじ</title>
+        </head>
+        <body>
+            <h1>おみくじ</h1>
+
+            いくつかの項目を入力して、おみくじを引いてみよう。
+            @form(CSRF(routes.HomeController.omikuji())){
+            <dt><b>あなたの名前</b></dt>
+            <input type = text name = "userName" value = "">
+
+            　
+            <dt><b>性別</b></dt>
+            <input type = radio name = "gender" value = "1" > 男性
+            <input type = radio name = "gender" value = "female"> 女性
+
+
+            <dt><b>誕生月</b></dt>
+            <select name = "birthMonth"  >
+                <option value = "">--</option>
+                <option value = "1">1月</option>
+                <option value = "2">2月</option>
+                <option value = "3">3月</option>
+                <option value = "4">4月</option>
+                <option value = "5">5月</option>
+                <option value = "6">6月</option>
+                <option value = "7">7月</option>
+                <option value = "8">8月</option>
+                <option value = "9">9月</option>
+                <option value = "10">10月</option>
+                <option value = "11">11月</option>
+                <option value = "12">12月</option>
+            </select>
+
+
+
+            　<br>
+            　<input type = "submit" name = "おみくじを引く" value = "おみくじを引く">
+
+                }
+        </body>
+    </html>
+
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>おみくじ</title>
+</head>
+<body>
+<h1>おみくじ</h1>
+
+いくつかの項目を入力して、おみくじを引いてみよう。
+
+<dt><b>あなたの名前</b></dt>
+  <input type = text name = "name" value = "">
+
+　
+<dt><b>性別</b></dt>
+  <input type = radio name = "sex" value = "male" > 男性
+  <input type = radio name = "sex" value = "female"> 女性
+
+
+<dt><b>誕生月</b></dt>
+  <select name = "birth"  >
+      <option value = "">--</option>
+      <option value = "1">1月</option>
+      <option value = "2">2月</option>
+      <option value = "3">3月</option>
+      <option value = "4">4月</option>
+      <option value = "5">5月</option>
+      <option value = "6">6月</option>
+      <option value = "7">7月</option>
+      <option value = "8">8月</option>
+      <option value = "9">9月</option>
+      <option value = "10">10月</option>
+      <option value = "11">11月</option>
+      <option value = "12">12月</option>
+  </select>
+
+
+<dt><b>星座</b></dt>
+  <select name="constellation">
+      <option value="おひつじ座(牡羊座、Aries)">おひつじ座(牡羊座、Aries)</option>
+      <option value="おうし座(牡牛座、Taurus)">おうし座(牡牛座、Taurus)</option>
+      <option value="ふたご座(双子座、Gemini)">ふたご座(双子座、Gemini)</option>
+      <option value="かに座(蟹座、Cancer)">かに座(蟹座、Cancer)</option>
+      <option value="しし座(獅子座、Leo)">しし座(獅子座、Leo)</option>
+      <option value="おとめ座(乙女座、Virgo)">おとめ座(乙女座、Virgo)</option>
+      <option value="てんびん座(天秤座、Libra)">てんびん座(天秤座、Libra)</option>
+      <option value="さそり座(蠍座、Scorpio)">さそり座(蠍座、Scorpio)</option>
+      <option value="いて座(射手座、Sagittarius)">いて座(射手座、Sagittarius)</option>
+      <option value="やぎ座(山羊座、Capricornus)">やぎ座(山羊座、Capricornus)</option>
+      <option value="みずがめ座(水瓶座、Aquarius)">みずがめ座(水瓶座、Aquarius)</option>
+      <option value="うお座(魚座、Pisces)">うお座(魚座、Pisces)</option>
+  </select>
+
+　<br>
+　<input type = "button" name = "おみくじを引く" value = "おみくじを引く"　onClick="location.href='/result.html?_ijt=307nfoc0ev0ehjn10tjpvi27cf'">
+
+</body>
+</html>

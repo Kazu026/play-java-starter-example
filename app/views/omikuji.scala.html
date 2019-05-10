@@ -1,0 +1,29 @@
+@(r:OmikujiResult)
+
+@main("おみくじの結果"){
+    <table>
+        <tr>
+            <th>引いた日時</th>
+            <td>@r.createdAt.format(OmikujiResult.DATE_TIME_FORMATTER)</td>
+        </tr>
+        <tr>
+        <th>名前</th>
+        <td>@r.userName</td>
+        </tr>
+        <tr>
+            <th>性別</th>
+            <td>@r.gender</td>
+        </tr>
+        <tr>
+            <th>性別</th>
+            <td>@(r.birthMonth)</td>
+        </tr>
+        <tr>
+            <th>おみくじの結果</th>
+            <td>@r.omikujiType</td>
+        </tr>
+    </table>
+    <a href = "@routes.HomeController.index()">
+        トップに戻る
+    </a>
+}
